@@ -23,9 +23,10 @@ Clone the repository and use the following commands to build the project:
 git clone https://github.com/Pedro-Evandro-Martins/bookstore-mvc
 cd bookstore-mvc
 
-# Future additional commands are expected for 
-#  configuring docker containers and
-#  environment variables
+docker compose up -d
+
+dotnet ef migrations add "InitialCreate"
+dotnet ef database update
 
 dotnet restore  # Restore dependencies
 dotnet build    # Build the project
