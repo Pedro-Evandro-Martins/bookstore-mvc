@@ -25,7 +25,7 @@ cd bookstore-mvc
 
 docker compose up -d
 
-dotnet ef migrations add "InitialCreate"
+dotnet ef migrations add "InitialCreation"
 dotnet ef database update
 
 dotnet restore  # Restore dependencies
