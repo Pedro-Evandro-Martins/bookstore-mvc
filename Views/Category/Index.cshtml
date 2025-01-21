@@ -17,16 +17,26 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var obj in Model)
+    @foreach (Category category in Model.OrderBy(category => category.DisplayOrder))
     {
         <tr>
             <td>
-                @obj.Name
+                @category.Name
             </td>
             <td>
-                @obj.DisplayOrder
+                @category.DisplayOrder
             </td>
         </tr>
     }
     </tbody>
+</table>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th></th>
+    </tr>
+    </thead>
 </table>
