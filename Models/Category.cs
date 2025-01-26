@@ -10,9 +10,11 @@ public class Category
     
     [Required]
     [DisplayName("Category Name")]
+    [MaxLength(30)]
     public string Name { get; set; }
     
     [Required]
     [DisplayName("Display Order")]
+    [Range(1, int.MaxValue)]
     public int DisplayOrder { get; set; }
 }
