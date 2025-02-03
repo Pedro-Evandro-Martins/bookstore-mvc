@@ -1,9 +1,18 @@
 @if(TempData["success"] is not null)
 {
-    <h3 class="text-success">@TempData["success"]!.ToString()</h3>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+     toastr.success('@TempData["success"]!.ToString()');
+    </script>
 }
 
 @if(TempData["error"] is not null)
 {
-    <h3 class="text-danger">@TempData["error"]!.ToString()</h3>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]!.ToString()');
+    </script>
+    
 }
