@@ -1,0 +1,9 @@
+@if(TempData["success"] is not null)
+{
+    <h3 class="text-success">@TempData["success"]!.ToString()</h3>
+}
+
+@if(TempData["error"] is not null)
+{
+    <h3 class="text-danger">@TempData["error"]!.ToString()</h3>
+}
